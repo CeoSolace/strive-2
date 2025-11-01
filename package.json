@@ -1,0 +1,66 @@
+{
+  "name": "strive-v2",
+  "version": "2.0.0",
+  "description": "All-in-one Discord bot with moderation, music, economy, automation, and dashboard — built for global teams.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:bot": "nodemon ./bot/index.js",
+    "dev:dashboard": "nodemon ./dashboard/server.js",
+    "dev": "concurrently \"npm run dev:bot\" \"npm run dev:dashboard\"",
+    "start:bot": "node ./bot/index.js",
+    "start:dashboard": "node ./dashboard/server.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "moderation",
+    "music",
+    "economy",
+    "dashboard",
+    "stripe",
+    "render",
+    "strive"
+  ],
+  "author": "ceosolace",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.17.0",
+    "connect-mongo": "^5.1.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.4.1",
+    "mongoose": "^8.5.0",
+    "node-fetch": "^3.3.2",
+    "stripe": "^15.10.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "ytdl-core": "^4.11.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ceosolace/strive-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ceosolace/strive-v2/issues"
+  },
+  "homepage": "https://top.gg/bot/1390685835346575481"
+}
